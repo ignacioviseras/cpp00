@@ -3,27 +3,18 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include "Contact.hpp"
 
 class PhoneBook {
     private:
-        Contact[8] contact;
+        Contact contacts[8];
+        int _index;
+        int _cnt;
     public:
         PhoneBook();
         ~PhoneBook();
 
-        // std::string getName() const;
-        void ADD(std::string n);
-        void SEARCH(std::string n);
-        void EXIT(std::string n);
+        void add();
+        void search();
+        void exit();
 };
-
-// #include "PhoneBook.hpp"
-// #include "Contact.hpp"
-
-// class PhoneBook
-// {
-//     private:
-
-//     public:
-//         new Contact[8];
-// };
