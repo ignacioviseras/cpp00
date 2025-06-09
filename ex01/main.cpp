@@ -3,27 +3,28 @@
 
 
 int main() {
-    std::cout << "Select option:" << std::endl;
-    std::cout << "1. ADD" << std::endl;
-    std::cout << "2. SEARCH" << std::endl;
-    std::cout << "3. EXIT" << std::endl;
+    PhoneBook p;
+    while (true) {
+        std::cout << "Select option:" << std::endl;
+        std::cout << "1. ADD" << std::endl;
+        std::cout << "2. SEARCH" << std::endl;
+        std::cout << "3. EXIT" << std::endl;
 
-    std::string text;
-    getline(std::cin, text);
+        std::cout << "> ";
+        std::string text;
+        std::getline(std::cin, text);
 
-    std::cout << "'" << text << "'" << std::endl;
-    if (text == "ADD")
-    {
-        // new PhoneBook pb;
-        // pb.
-        std::cout << "option 1" << std::endl;
-    }
-    else if (text == "SEARCH")
-        std::cout << "option 2" << std::endl;
-    else if (text == "EXIT")
-    {
-        std::cout << "BYE :(" << std::endl;
-        return 0;
+        if (text == "ADD")
+            p.add();
+        else if (text == "SEARCH")
+            p.search();
+        else if (text == "EXIT")
+        {
+            std::cout << "BYE :(" << std::endl;
+            break;
+        }
+        else
+            std::cout << "❌ Invalid option. Try ADD, SEARCH or EXIT." << std::endl;
     }
     return 0;
 }
